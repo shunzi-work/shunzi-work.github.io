@@ -1,0 +1,191 @@
+body {
+    background-color: #ffffff;
+    margin: 0;
+    /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+    font-family: Verdana, sans-serif;
+}
+
+
+/* Navigation Bar Layout */
+
+nav {
+    background-color: #ffffff;
+    padding: 12px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure the navigation bar stays on top */
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+    margin: 0 12px;
+    /* font-weight: bold; */
+    font-size: 18px;
+}
+
+
+
+/* Main Content Layout */
+
+#main-content {
+    margin: 100px 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+section {
+    padding: 0;
+    margin: 0px;
+}
+
+a {
+    color: inherit;
+}
+
+/* Introduction Section */
+
+.introduction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 70px; */
+}
+
+.introduction img {
+    width: 170px;
+    border-radius: 50%; /* Make the photo round */
+    margin: 0;
+    margin-left: 20px;
+    margin-right: 40px;
+}
+
+.introduction .text {
+    /* max-width: 780px; */
+    text-align: justify;
+}
+
+.introduction h2 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight:normal;
+}
+
+.introduction p {
+    font-size: 14px;
+    color: #555555;
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+/* Research Project Section */
+
+.projects {
+    text-align: left;
+}
+
+.projects h2 {
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between;  */
+    gap: 10px;
+}
+
+.project-card {
+    text-align: center;
+    max-width: calc((100% - 20px) / 3); 
+    margin-bottom: 20px;
+    flex-direction: column;
+    box-sizing: border-box; /* Include padding and border in the total width */
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    /* border-radius: 10px; */
+    object-fit: contain;
+    object-position: center;
+}
+
+.card-description {
+    padding: 10px;
+}
+
+.card-description p {
+    font-size: 14px;
+    text-align: justify;
+    /* margin-bottom: 10px; */
+}
+
+.read-more {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #ffffff;
+    color: #000000;
+    /* text-decoration: none; */
+    border: 1px dashed #68a0f4;
+    border-radius: 3px;
+    text-decoration: wavy;
+}
+
+.read-more:hover {
+    background-color: #c6e1ff88;     /* Light blue color on hover */
+}
+
+
+
+/* Footer Layout */
+
+footer {
+    width: 100%;
+    display: flex;
+    padding: 20px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+    /* position: fixed; */
+    /* bottom: 20px; */
+    background-color: #ffffff
+}
+
+.footer-icon {
+    width: 22px;
+    height: 22px;
+}
+
+a.icon-link {
+    transition: transform 200ms ease-in-out;
+}
+
+
+
+/* Media query for different screens  */
+
+@media (max-width: 800px) {
+    .introduction {
+        flex-direction: column;
+        align-items: center; /* Center the whole text part */
+        text-align: center;
+    }
+
+    .introduction img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    #main-content {
+        margin: 20px 10%;
+    }
+}
