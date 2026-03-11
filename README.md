@@ -1,1 +1,12 @@
-Source code for [shunzi-work.github.io](https://shunzi-work.github.io)
+## About
+
+This repository contains the source code for my personal portfolio and project website [shunzi-work.github.io](https://shunzi-work.github.io).
+
+### Built With
+
+- [Quarto](https://quarto.org) - Scientific and technical publishing system
+- [GitHub Pages](https://pages.github.com) - Static site hosting
+
+## License
+
+See LICENSE file for details.

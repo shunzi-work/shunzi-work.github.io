@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 24px;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    background-color: #ffffff;
+    margin: 0; 
+    padding: 20vh 10vw; 
+    font-family: Verdana, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+
+/* Navigation Bar Layout */
+
+.nav-container {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Full width */
+    background-color: #ffffff; 
+    padding: 10px 0; /* Vertical padding for the nav container */
+    position: fixed; /* Fixed positioning */
+    top: 0; /* Stick to the top */
+    left: 0; /* Align to the left */
+    z-index: 1000; /* Ensure it’s on top of other elements */
+}
+
+nav {
+    display: flex; /* Use flexbox for the nav itself */
+    justify-content: center; /* Center nav items */
+    width: 100%; /* Full width */
+  }
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+    margin: 0 12px;
+    /* font-weight: bold; */
+    font-size: 16px;
+}
+
+
+/* Introduction Section */
+
+.introduction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 40rem;
+	margin: 0 auto;
+}
+
+.introduction img {
+    width: 170px;
+    border-radius: 50%; /* Make the photo round */
+    margin: 0;
+    margin-left: 20px;
+    margin-right: 40px;
+}
+
+.introduction .text {
+    /* max-width: 780px; */
+    text-align: justify;
+}
+
+.introduction h2 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight:normal;
+}
+
+.introduction p {
+    font-size: 14px;
+    color: #555555;
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+a {
+	display: inline-block;
+	color: inherit;
+	text-decoration: none;
+	position: relative;
+	outline: none;
+	/* transition: color var(--link-transition); */
+}
+a::before {
+	content: '';
+	display: block;
+	height: 0.5rem;
+	position: absolute;
+	top: 50%;
+	right: -0.08rem;
+	left: -0.08rem;
+	z-index: -1;
+	background-color: #68a0f458;
+	/* transform: translateY(0%);  */
+    /* rotateZ(-3deg); */
+	/* transition: background-color var(--link-transition), */
+		/* transform var(--link-transition); */
+}
+a:hover,
+a:focus {
+	color: white;
+}
+a:hover::before,
+a:focus::before {
+	background-color: #0045ad58;
+	transform: translateY(-50%) scaleY(1.8);
+}
+
+
+/* Main Content Layout */
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 40rem;
+	margin: 0 auto;
+}
+
+
+/* Research Project Section */
+
+.projects {
+    text-align: left;
+}
+
+.projects h2 {
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between;  */
+    gap: 10px;
+}
+
+.project-card {
+    text-align: center;
+    max-width: calc((100% - 20px) / 3); 
+    margin-bottom: 20px;
+    flex-direction: column;
+    box-sizing: border-box; /* Include padding and border in the total width */
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    /* border-radius: 10px; */
+    object-fit: contain;
+    object-position: center;
+}
+
+.card-description {
+    padding: 10px;
+}
+
+.card-description p {
+    font-size: 14px;
+    text-align: justify;
+    /* margin-bottom: 10px; */
+}
+
+.read-more {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #ffffff;
+    color: #000000;
+    /* text-decoration: none; */
+    border: 1px dashed #68a0f4;
+    border-radius: 3px;
+    text-decoration: wavy;
+}
+
+.read-more:hover {
+    background-color: #c6e1ff88;     /* Light blue color on hover */
+}
+
+
+
+/* Footer Layout */
+
+footer {
+    width: 100%;
+    display: flex;
+    padding: 20px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+    /* position: fixed; */
+    /* bottom: 20px; */
+    background-color: #ffffff
+}
+
+.footer-icon {
+    width: 22px;
+    height: 22px;
+}
+
+a.icon-link {
+    transition: transform 200ms ease-in-out;
+}
+
+
+
+/* Media query for different screens  */
+
+@media (max-width: 800px) {
+    .introduction {
+        flex-direction: column;
+        align-items: center; /* Center the whole text part */
+        text-align: center;
+    }
+
+    .introduction img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    #main-content {
+        margin: 20px 10%;
+    }
+}
