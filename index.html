@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Hi! I’m Shunzi Lu</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -30,16 +36,17 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ac94aa2d091954049076fc98439db6d7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-a20ec67e4eaf1004f696852e93606815.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-edf73d8a00a2f54e32f04455e1bed8c8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dd508945c5c8da8bcd329199f87c5100.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/quarto-auto-dark-mode-1.0.0/auto-dark-mode.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
@@ -70,6 +77,35 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-research-listings .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: [],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-research-listings'] = new List('listing-research-listings', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6W7NTMR1VX"></script>
 
 <script type="text/javascript">
@@ -80,6 +116,35 @@ gtag('js', new Date());
 gtag('config', 'G-6W7NTMR1VX', { 'anonymize_ip': true});
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -146,7 +211,7 @@ gtag('config', 'G-6W7NTMR1VX', { 'anonymize_ip': true});
 </script>
 <div class="quarto-about-trestles">
   <div class="about-entity">
-    <img src="assets/img/photo.jpg" class="about-image
+    <img src="assets/img/photo-me.jpg" class="about-image
   round " style="height: 10em; width: 10em;">
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -155,23 +220,39 @@ gtag('config', 'G-6W7NTMR1VX', { 'anonymize_ip': true});
 <div class="quarto-title-meta">
   </div>
 </header>
+    <div class="about-links">
+  <a href="/assets/files/CV-shunzi.pdf" class="about-link" rel="" target="">
+    <i class="bi bi-file-earmark-person"></i>
+     <span class="about-link-text">CV</span>
+  </a>
+  <a href="mailto:shunzlu@sas.upenn.edu" class="about-link" rel="" target="">
+    <i class="bi bi-envelope"></i>
+     <span class="about-link-text">E-mail</span>
+  </a>
+</div>
   </div>
   <div class="about-contents"><div id="about-heading">
-<p>I’m a PhD student studying Physical Oceanography. I’m interested in the dynamics that govern our oceans and their intricate connections with the climate system. My current research focuses on the Southern Ocean, a crucial region that plays a key role in regulating global climate patterns. I am particularly interested in how advanced climate models capture the complex processes in the Southern Ocean, and how can we improve our understanding of climate behavior and its implications for the future.</p>
+<p>I am currently a research assistant at the University of Pennsylvania’s <a href="https://earth.sas.upenn.edu/" target="_blank">Department of Earth &amp; Environmental Science</a>, where I work with Prof.&nbsp;Irina Marinov in the <a href="https://web.sas.upenn.edu/oceans-and-climate/" target="_blank">Oceans and Climate Group</a>.</p>
+<p>I’m interested in the dynamics that govern our oceans and their intricate connections with the climate system. My current research focuses on the Southern Ocean, a crucial region that plays a key role in regulating global climate patterns. I am particularly interested in how advanced climate models capture the complex processes in the Southern Ocean, and how can we improve our understanding of climate behavior and its implications for the future.</p>
+<!-- [ résumé](assets/files/CV-shunzi.pdf){.btn .btn-outline-primary .btn-sm role="button"}
+[ E-mail](mailto:shunzlu@sas.upenn.edu){.btn .btn-outline-primary .btn-sm role="button"} -->
 <!-- You can learn more about me [here](about.qmd).  -->
-<p>You can learn more about me <a href="assets/files/CV_2026.pdf">here</a>.</p>
 </div></div>
 </div>
 
-<!-- 
-### My recent work
+<section id="my-recent-work" class="level3">
+<h3 data-anchor-id="my-recent-work">My recent work</h3>
+<div id="listing-research-listings" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
 
-:::{#research-listings}
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
 
-::: -->
 
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
